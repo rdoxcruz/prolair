@@ -2,13 +2,23 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── Header scroll shadow ─────────────────────────────────
-  const header = document.getElementById('header');
-  if (header) {
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 10);
-    }, { passive: true });
-  }
+  // ── Header hide on scroll down / show on scroll up ──────
+  const headerContainer = document.querySelector('.header-container');
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    const scrollingDown = currentScrollY > lastScrollY;
+
+    // Só esconde depois de rolar mais que a própria altura do header
+    if (scrollingDown && currentScrollY > 116) {
+      headerContainer.classList.add('hidden');
+    } else {
+      headerContainer.classList.remove('hidden');
+    }
+
+    lastScrollY = currentScrollY;
+  }, { passive: true });
 
   // ── Mobile menu toggle ───────────────────────────────────
   const toggle = document.querySelector('.mobile-menu-toggle');
