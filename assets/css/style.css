@@ -1,0 +1,164 @@
+/* ============================================
+   PROLAIR — CSS base
+   Sistema simples, sem framework, fácil de manter
+   ============================================ */
+
+/* Variáveis (tokens de design) */
+:root {
+  --cor-primaria: #0066cc;
+  --cor-primaria-escura: #004a99;
+  --cor-whatsapp: #25d366;
+  --cor-texto: #1a1a1a;
+  --cor-texto-suave: #555;
+  --cor-fundo: #ffffff;
+  --cor-fundo-suave: #f5f7fa;
+  --cor-borda: #e1e5eb;
+
+  --fonte-sans: 'Inter', -apple-system, system-ui, sans-serif;
+
+  --largura-max: 1200px;
+  --raio: 8px;
+  --sombra: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Reset mínimo */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--fonte-sans);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  font-size: 16px;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--cor-primaria); text-decoration: none; }
+h1, h2, h3 { line-height: 1.2; margin-bottom: 0.5em; }
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; }
+section { padding: 4rem 1.5rem; max-width: var(--largura-max); margin: 0 auto; }
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--cor-borda);
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 100;
+}
+.main-nav a {
+  margin: 0 0.75rem;
+  color: var(--cor-texto);
+  font-weight: 500;
+}
+.btn-whatsapp-header {
+  background: var(--cor-whatsapp);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--raio);
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.hero-lead { font-size: 1.125rem; color: var(--cor-texto-suave); margin: 1rem 0 2rem; }
+.hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.btn-primary {
+  background: var(--cor-whatsapp);
+  color: #fff;
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--raio);
+  font-weight: 600;
+  display: inline-block;
+}
+.btn-secondary {
+  background: #fff;
+  color: var(--cor-texto);
+  padding: 0.875rem 1.5rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  font-weight: 500;
+}
+.hero-prova { color: var(--cor-texto-suave); font-size: 0.95rem; }
+
+/* Blocos de conteúdo */
+.bloco-local, .oferta, .caso, .faq, .cta-final {
+  background: var(--cor-fundo-suave);
+  border-radius: var(--raio);
+  padding: 2rem;
+}
+.oferta-lista { list-style: none; }
+.oferta-lista li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+}
+.oferta-lista li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--cor-primaria);
+  font-weight: bold;
+}
+
+/* Caso */
+.caso-card h3 { margin-top: 1rem; font-size: 1rem; color: var(--cor-primaria); }
+
+/* FAQ */
+.faq details {
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 1rem 0;
+}
+.faq summary { cursor: pointer; font-weight: 600; }
+.faq details p { margin-top: 0.5rem; color: var(--cor-texto-suave); }
+
+/* CTA final */
+.cta-final { text-align: center; }
+
+/* Footer */
+.site-footer {
+  background: var(--cor-texto);
+  color: #fff;
+  padding: 3rem 1.5rem 1rem;
+}
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: var(--largura-max);
+  margin: 0 auto;
+}
+.site-footer a { color: #fff; opacity: 0.85; display: block; padding: 0.25rem 0; }
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 2rem;
+  opacity: 0.7;
+}
+
+/* WhatsApp flutuante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 99;
+  border-radius: 50%;
+  box-shadow: var(--sombra);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+  .footer-cols { grid-template-columns: 1fr; }
+  .main-nav { display: none; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.4rem; }
+}
