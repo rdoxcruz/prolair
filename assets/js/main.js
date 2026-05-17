@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── Remove unresolved attribute (reveal page after load) ─
+  document.body.removeAttribute('unresolved');
+
   // ── Header hide on scroll down / show on scroll up ──────
   const headerContainer = document.querySelector('.header-container');
   let lastScrollY = window.scrollY;
