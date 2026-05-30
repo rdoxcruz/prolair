@@ -1,7 +1,7 @@
 /* ============================================================
    Prolair — style.css
    Design system inspirado na referência ServiceTitan
-   Brand: #001c3e (navy) / #f26b1c (orange)
+   Brand: #141e2b (navy) / #f26b1c (orange)
    ============================================================ */
 
 /* ── TOKENS ─────────────────────────────────────────────── */
@@ -34,12 +34,13 @@
   --letter-spacing-h2: -0.02em;
 
   /* Brand colors */
-  --navy-6: #001020;
-  --navy-5: #001c3e;
-  --navy-4: #002d63;
-  --navy-3: #003d87;
-  --navy-2: #6b8fbd;
-  --navy-1: #e8eef6;
+  --navy-rgb: 20, 30, 43;
+  --navy-6: #0c121a;
+  --navy-5: #141e2b;
+  --navy-4: #1e2a3b;
+  --navy-3: #283749;
+  --navy-2: #5c6d80;
+  --navy-1: #ecf0f4;
 
   --orange:       #f26b1c;
   --orange-dark:  #d45a0f;
@@ -68,9 +69,9 @@
   --whatsapp-dark: #128C7E;
 
   /* Shadows */
-  --shadow-sm: 0px 3px 10px rgba(0,28,62,.08);
-  --shadow-md: 0px 15px 40px rgba(0,28,62,.12);
-  --shadow-lg: 0px 30px 60px rgba(0,28,62,.16);
+  --shadow-sm: 0px 3px 10px rgba(var(--navy-rgb),.08);
+  --shadow-md: 0px 15px 40px rgba(var(--navy-rgb),.12);
+  --shadow-lg: 0px 30px 60px rgba(var(--navy-rgb),.16);
 
   /* Z-index */
   --z-header:   800000;
@@ -370,7 +371,7 @@ h4 {
 .hero-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #001c3e 1%, rgba(0,28,62,0.72) 40%, rgba(0,28,62,0.30) 100%);
+  background: linear-gradient(0deg, var(--navy-5) 1%, rgba(var(--navy-rgb),0.72) 40%, rgba(var(--navy-rgb),0.30) 100%);
 }
 .hero-inner {
   position: relative;
