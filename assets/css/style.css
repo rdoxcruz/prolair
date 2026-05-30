@@ -7,7 +7,7 @@
 /* ── TOKENS ─────────────────────────────────────────────── */
 :root {
   /* Fonts */
-  --font-family-heading: 'Inter', sans-serif;
+  --font-family-heading: 'Finlandica Headline', sans-serif;
   --font-family-body:    'Inter', sans-serif;
 
   /* Type scale */
@@ -119,21 +119,21 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 h1 {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-h1);
-  font-weight: 800;
+  font-weight: 600;
   line-height: var(--line-height-h1);
   letter-spacing: var(--letter-spacing-h1);
 }
 h2 {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-h2);
-  font-weight: 700;
+  font-weight: 600;
   line-height: var(--line-height-h2);
   letter-spacing: var(--letter-spacing-h2);
 }
 h3 {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-h3);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 130%;
 }
 h4 {
@@ -440,7 +440,7 @@ h4 {
   justify-content: center;
   flex-shrink: 0;
 }
-.service-card h3 { font-size: var(--font-size-h5); font-weight: 700; line-height: 130%; color: var(--navy-5); }
+.service-card h3 { font-size: var(--font-size-h5); font-weight: 600; line-height: 130%; color: var(--navy-5); }
 .service-card p { color: var(--grey-7); font-size: 15px; line-height: 155%; flex: 1; }
 .card-link { color: var(--orange); font-weight: 600; font-size: 14px; margin-top: 4px; }
 
